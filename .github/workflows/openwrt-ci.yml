@@ -37,6 +37,7 @@ jobs:
 
       - name: Space cleanup
         env:
+          SSH_ACTIONS: true
           DEBIAN_FRONTEND: noninteractive
         run: |
           docker rmi `docker images -q`
